@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
+/* 
+Tailwind V4 removed the need for the tailwind.config.js file I can add in my own colors like financeGreen and use 
+the various namespaces (color, font, spacing, etc...) to identify what utilities I want that variable to be used for.
+*/
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --financeGreen: #10B981;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-financeGreen: var(--financeGreen); /* This creates CSS utilities like "bg-financeGreen" automatically */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
