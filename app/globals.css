@@ -1,32 +1,57 @@
 @import "tailwindcss";
 
-/* 
-Tailwind V4 removed the need for the tailwind.config.js file I can add in my own colors like financeGreen and use 
-the various namespaces (color, font, spacing, etc...) to identify what utilities I want that variable to be used for.
-*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --financeGreen: #10B981;
+  --background: #181818;
+  --foreground: #e2d5c3;
+
+  --stone-100: #e2d5c3;
+  --stone-200: #cbbfaf;
+  --stone-300: #a89880;
+  --stone-400: #7a6e62;
+  --stone-500: #4a423c;
+
+  --surface: #202020;
+  --card: #232323;
+  --elevated: #2e2e2e;
+
+  --accent-fern: #6dba8a;
+  --accent-amber: #c9954a;
+  --accent-clay: #b86b6b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-financeGreen: var(--financeGreen); /* This creates CSS utilities like "bg-financeGreen" automatically */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-stone-100: var(--stone-100);
+  --color-stone-200: var(--stone-200);
+  --color-stone-300: var(--stone-300);
+  --color-stone-400: var(--stone-400);
+  --color-stone-500: var(--stone-500);
+
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-elevated: var(--elevated);
+
+  --color-fern: var(--accent-fern);
+  --color-amber: var(--accent-amber);
+  --color-clay: var(--accent-clay);
+
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, sans-serif;
 }
