@@ -12,12 +12,12 @@ export default function BonsaiCanvas() {
     return (
         <div id="canvas-container" style={{ width: '100vw', height: '100vh' }}>
             <Canvas> {/* This sets up a Scene and a Camera for rendering, every frame in a scene is rendered for me.*/}
+                <ambientLight intensity={1} />
+                <directionalLight color="white" position={[0, 0, 5]} />
                 <mesh> {/* Equivalent to THREE.Mesh(), allows me to see what is in the scene*/}
                     <boxGeometry args={[2, 2, 2]} /> {/* Creating a new mesh using BoxGeometry, this is the 3D space */}
                     <meshStandardMaterial color="hotpink" /> {/* This is the surface apperance of the 3D space */}
                 </mesh>
-                <ambientLight intensity={1} />
-                <directionalLight color="white" position={[0, 0, 5]} />
             </Canvas>
         </div>
     )
