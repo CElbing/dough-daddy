@@ -1,9 +1,5 @@
-import dynamic from 'next/dynamic'
 
-const BonsaiCanvas = dynamic(
-  () => import('./components/Scene/BonsaiCanvas'),
-  { ssr: false }
-)
+import BonsaiCanvas from "./components/Scene/BonsaiCanvas"
 
 export default function Home() {
   return (
