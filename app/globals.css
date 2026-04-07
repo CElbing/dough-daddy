@@ -53,5 +53,17 @@ body {
 }
 
 body {
-  font-family: var(--font-sans), Arial, sans-serif;
+  font-family: var(--font-sans)
+}
+
+p {
+  color: --accent-amber;
+}
+
+h1 {
+  color: --color-stone-100;
+}
+
+h3 {
+  color: --color-clay;
 }
