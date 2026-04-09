@@ -1,24 +1,20 @@
-
-import BonsaiCanvas from "./components/Scene/BonsaiCanvas"
-import WelcomeBanner from "./components/WelcomeBanner"
+import BonsaiCanvas from "./components/Scene/BonsaiCanvas";
+import WelcomeBanner from "./components/WelcomeBanner";
 
 export default function Home() {
   return (
     <>
-      <main style={{
-        width: '100vw',
-        height: '100vh',
-        margin: 0,
-        padding: 0,
-        overflow: "hidden",
-        position: "fixed",
-        zIndex: 2,
-        pointerEvents: "none"
-      }}>
+      <main
+        style={{
+          margin: 0,
+          padding: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <WelcomeBanner />
-      </main >
-
-      <BonsaiCanvas />
+        <BonsaiCanvas />
+      </main>
     </>
-  )
+  );
 }
